@@ -80,3 +80,59 @@ Google Cloud Platform Service Level Agreements
 Microsoft Azure Service Level Agreement
 GitHub Enterprise Service Level Agreement
 Atlassian Products Service Level Agreement
+
+# Section 4: API Design
+
+## 13. Introduction to API Design for Software Architects
+
+ API - contract between engeers and applliacation clients
+
+ API:
+ - Public APIs
+ - Private/Internal APIs
+ - Partner APIs
+
+## 14. RPC
+
+RPC - Remote Procedure Call
+
+## 15. Popular RPC Frameworks and Technologies
+
+gRPC
+gRPC is a modern open source high performance Remote Procedure Call (RPC) framework. It was originally developed by Google in 2015 as the next generation of its own internal RPC infrastructure.
+
+It uses HTTP/2 as its transport protocol and Protocol Buffers as its Interface Description Language.
+gRPC currently supports the following languages:
+
+C#
+C++
+Dart
+Go
+Java
+Kotlin
+Node
+Objective-C
+PHP
+Python
+Ruby
+
+Apache Thrift
+Thrift is a lightweight, language-independent software stack for point-to-point RPC.
+
+Thrift makes it easy for programs written in different programming languages to share data and call remote procedures since it supports more than 28 languages, including C++, Java, Python, Go, Scala, Swift, PHP, Ruby, Perl, C#, JavaScript, Node.js, and other languages.
+
+Thrift was created at Facebook for "scalable cross-language services development". It uses its own Interface Description Language called Thrift interface description language.
+
+A full tutorial for all the supported languages can be found here.
+
+Java Remote Method Invocation (RMI)
+RPC framework that allows one Java virtual machine to invoke methods on an object running in another Java virtual machine.
+
+RMI uses Java as the Interface Description Language.
+
+You can find the full tutorial here.
+
+## 16. REST API
+
+Representational State Transfer (REST): https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+HTTP request methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
