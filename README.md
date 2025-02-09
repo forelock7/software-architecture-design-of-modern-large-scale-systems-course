@@ -307,3 +307,79 @@ GCP CDN offers fast, reliable web and video content delivery with a global scale
 
 Microsoft Azure Content Delivery Network
 Microsoft's CDN solution offers global coverage, full integration with Azure services, and a simple setup.
+
+# Section 6: Data Storage at Global Scale
+
+## 25. Relational Databases & ACID Transactions
+
+When to choose:
+    - Perform complex and flexible queries to analyze our data
+    - Guarantee ACID transactions between different entities in our database
+
+When not to choose:
+    - There isn't any inherent relationship between different records that justifies storing our data in tables
+    - Read performance is the most important quality that we need for providing good user expiriance
+
+## 26. Non-Relational Databases
+
+When to choose:
+    - Superior when it comes to query speed
+    - Perfect choice for caching
+    - Handling real-time big data
+    - Data is not structured
+    - Different records can contain different attributes
+
+Where to use: User Profiles, Content Management
+
+Non-Relational Databases - Solutions
+
+Key/Value Stores Examples
+- Redis
+- Aerospike
+- Amazon DynamoDB
+
+Document Store Examples
+- Cassandra
+- MongoDB
+
+Graph Databases Examples
+- Amazon Neptune
+- NEO4J
+
+## 28. Techniques to Improve Performance, Availability & Scalability Of Databases
+
+- Database Indexing
+- Database Replication
+- Database Partitioning/Sharding
+
+## 29. Brewer’s (CAP) Theorem
+
+Network partition - when one DB Replica cannot reach other Replicas to synch
+
+CAP Theorem - "In the presence of a Network Partion, a distributed database cannot guarantee both Consistancy and Availability and has to choose only one of them."
+It's valid for only when there is network patition!!!
+
+C = Consistency
+A = Availability
+P = Partition Tolerance
+
+We have to drop one of three:
+
+- CA - no Partition Tolerance
+- CP - no Availability
+- AP - no Consistency
+
+## 30. Scalable Unstructured Data Storage
+ - DFS - Distributed File System
+ - Object Store (Cloud - Amazon S3, GCP Storage, Azure Blob, Alibaba OSS)
+
++ Cloud-Based Object Store Solutions
+Amazon S3 (Simple Storage Service) - Amazon's highly scalable cloud storage service that stores object data within buckets. Designed to store and protect any amount of data for various use cases, such as websites, cloud-native applications, backups, archiving machine learning, and analytics.
+GCP Cloud Storage - Google Cloud's managed service for storing unstructured data for companies of all sizes
+Azure Blob Storage -  Microsoft's massively scalable and secure object storage for cloud-native workloads, archives, data lakes, high-performance computing, and machine learning
+Alibaba Cloud OSS (Object Storage Service) - Fully managed enterprise-ready Object Storage Service to store and access any amount of data from anywhere.
+
++ Open Source and Third-Party Object Store Solutions
+OpenIO - A software-defined open-source object storage solution ideal for Big Data, HPC, and AI. It is S3 compatible and can be deployed on-premises or cloud-hosted on any hardware that you choose.
+MinIO - High-performance, S3-compatible object storage. It is native to Kubernetes and 100% open source under GNU AGPL v3.
+Ceph - Open-source, reliable and scalable storage. Ceph provides a unified storage service with object, block, and file interfaces from a single cluster built from commodity hardware components.
