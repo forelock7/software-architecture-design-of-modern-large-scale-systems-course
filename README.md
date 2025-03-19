@@ -383,3 +383,55 @@ Alibaba Cloud OSS (Object Storage Service) - Fully managed enterprise-ready Obje
 OpenIO - A software-defined open-source object storage solution ideal for Big Data, HPC, and AI. It is S3 compatible and can be deployed on-premises or cloud-hosted on any hardware that you choose.
 MinIO - High-performance, S3-compatible object storage. It is native to Kubernetes and 100% open source under GNU AGPL v3.
 Ceph - Open-source, reliable and scalable storage. Ceph provides a unified storage service with object, block, and file interfaces from a single cluster built from commodity hardware components.
+
+# Section 7: Software Architecture Patterns and Styles
+
+## 32. Introduction to Software Architecture Patterns & Styles
+
+1. Save valuable time and resources
+2. Avoid making our architecture resemble a Big Ball of Mud - Anti Pattern
+3. Other engineer can continue follow
+
+## 33. Multi-Tier Architecture
+
+Multi-tier
+- Logical separation - limits the scope of resposibility on each tier
+- Physical separation - allows each tier to be separately developed, upgraded, scaled
+
+Multi-layer
+
+Three-tier Architecture:
+1. Representaton Tier (User Interface)
+2. Aplication Tier
+3. Data Tier
+
+4-tier:
+1. Representaton Tier (User Interface)
+2. API-Gateway
+3. Aplication Tier
+4. Data Tier
+
+## 34. Microservices Architecture
+
+Microservices Architecture organizes business logic as a collection of loosely coupled and independently deployed services.
+
+Best practices:
+- Single Resposibility Principle (SRP);
+- Separate Database Per Service;
+
+## 35. Event Driven Architecture
+
+Definition: An event is an immutable statement of a fact or a change
+
+Components:
+1. Event Emitter/Producer
+2. Message Brokers
+3. Consumer
+
+There is no depandancy between 2 microservices anymore.
+
+Event Sourcing Pattern - Database Elimination
+
+CQRS Pattern - Command Query Resposibility Segregation
+- It allows to separate Update and Read Operations to different DB. communication between DBs is used Message Brocker.
+- Join multiple tables from one DB
