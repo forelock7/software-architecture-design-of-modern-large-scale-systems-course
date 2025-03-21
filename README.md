@@ -435,3 +435,49 @@ Event Sourcing Pattern - Database Elimination
 CQRS Pattern - Command Query Resposibility Segregation
 - It allows to separate Update and Read Operations to different DB. communication between DBs is used Message Brocker.
 - Join multiple tables from one DB
+
+# Section 8: Big Data Architecture Patterns
+
+## 36. Introduction to Big Data
+
+Big Data Definition.
+Datasets that are either:
+- Too large in size
+- Too complex in structure
+- Come to our system at a high relocate
+that exceeds the capacity of a traditional application
+
+Volume - quantity of data that we need to:
+- Process;
+- Store;
+- Analyze.
+
+Variety - large variety of unstructured data. Data fusion - combinig different data
+
+Velocity - continous stream of data.
+
+## 37. Big Data Processing Strategies
+
+1. Batch Processing
++ Easy to implement
++ High availability
++ Better efficient
++ Higher Fault Tolerance
++ Complex and deep analycis
+- Long delay between incoming data and result from the processing job
+- don't get real-time view of data and can't respond to the platform fast enaugh
+2. Real Time Processing
++ can analize imidiatly
+- hard to do complex analysis
+
+## 38. Lambda Architecture
+
+Combines Batch and Real-Time Processing
+
+Layers:
+1. Batch Layer
+2. Speed Layer
+3. Serving Layer
+
+Data is dispatched to Batch and Speed Layers simulteniously
+Servng Layer merges data from DBs of previous Layers
